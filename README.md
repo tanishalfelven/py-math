@@ -12,6 +12,7 @@ Requirements
 > - +, -, *, and /
 > - Q for quit
 > - = for evaluate
+> 
 > Designed in such a way that it would be easy to add additional operators
 > Here are some calculations we will expect of your program:
 > - 2+2 = 4
