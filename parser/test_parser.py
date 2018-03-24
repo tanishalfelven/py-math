@@ -36,6 +36,8 @@ class ParserTestCase(unittest.TestCase):
         self.assertEqual(nodes[2].value.representation, '+')
         self.assertEqual(nodes[3].value.representation, '-')
         self.assertEqual(nodes[4].value.value, 5)
+        nodes = self.parser.create_nodes('5.5+.3')
+        self.assertEqual(nodes[0].value.value, 5.5)
 
     def test_evaluate_unary_expressions(self):
         nodes = self.parser.create_nodes('+-+-5')
