@@ -13,11 +13,11 @@ class Operator(NodeValue):
 
     def evaluate_as_binary(self, value_1, value_2):
         if self.is_binary:
-            self.__binary_evaluation(value_1, value_2)
+            return self.__binary_evaluation(value_1, value_2)
 
     def evaluate_as_unary(self, value):
         if self.is_unary:
-            self.__unary_evaluation(value)
+            return self.__unary_evaluation(value)
 
 class Operations:
     # Unary Functions
