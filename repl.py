@@ -14,6 +14,10 @@ def main():
             print('goodbye!')
             break
         else:
-            print('= %s' % (parser.evaluate(user_input)))
+            try:
+                result = parser.evaluate(user_input)
+                print('= %s' % result)
+            except:
+                print('Unable to process, please try to reformat your input.')
 
 if __name__ == "__main__":main()
