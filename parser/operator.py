@@ -1,4 +1,5 @@
 from .number_value import NodeValue
+from .parser_exception import ParserException
 
 class Operator(NodeValue):
     def __init__(self, representation, precedence_level, is_unary, is_binary, unary_evaluation = None, binary_evaluation = None):
@@ -14,10 +15,12 @@ class Operator(NodeValue):
     def evaluate_as_binary(self, value_1, value_2):
         if self.is_binary:
             return self.__binary_evaluation(value_1, value_2)
+        raise ParserException('Binary expression not possible for [' + self.representation + '] operator')
 
     def evaluate_as_unary(self, value):
         if self.is_unary:
             return self.__unary_evaluation(value)
+        raise ParserException('Unary expression not possible for [' + self.representation + '] operator')
 
 class Operations:
     # Unary Functions
