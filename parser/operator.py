@@ -18,3 +18,30 @@ class Operator(NodeValue):
     def evaluate_as_unary(self, value):
         if self.is_unary:
             self.__unary_evaluation(value)
+
+class Operations:
+    # Unary Functions
+    @staticmethod
+    def positive_unary(value_1):
+        return value_1
+
+    @staticmethod
+    def negative_unary(value_1):
+        return -value_1
+
+    # Binary Functions
+    @staticmethod
+    def addition(value_1, value_2):
+        return value_1 + value_2
+
+    @staticmethod
+    def subtraction(value_1, value_2):
+        return value_1 - value_2
+
+    @staticmethod
+    def multiplication(value_1, value_2):
+        return value_1 * value_2
+
+    @staticmethod
+    def division(value_1, value_2):
+        return value_1 / value_2
