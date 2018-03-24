@@ -1,4 +1,6 @@
-### PyMath
+### PyMath Calculator
+
+**Programmed and tested with Python 3.6.3**
 
 This is a simple calculator that is meant to be extendable.
 
