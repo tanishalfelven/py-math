@@ -10,7 +10,7 @@ def main():
     parser = Parser()
     while True:
         user_input = input('> ')
-        if user_input.upper() == 'Q':
+        if str(user_input).upper() == 'Q':
             print('goodbye!')
             break
         else:
